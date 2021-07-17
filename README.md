@@ -170,16 +170,17 @@ if (typeof id!= 'undefined'){
 }
 
 ```
-//Greater or less than
-
+> //Greater or less than
+```
 if (id > 200){
     console.log('correct');
 }else{
     console.log('incorrect');
 }
+```
 
-// IF ELSE
-
+> // IF ELSE
+```
 const color = 'yellow';
 
 if (color=='red'){
@@ -189,7 +190,8 @@ if (color=='red'){
 }else{
     console.log("color is not red or blue");
 }
-
+```
+```
 const name = 'steve';
 const age = 20;
 
@@ -200,9 +202,9 @@ if (age>0 && age<12){
 }else {
     console.log(`${name} is an adult`);
 }
-
-// OR ||
-
+```
+> // OR ||
+```
 if (age < 16 || age>65){
     console.log(`${name} can not run in race`);
 }else{
