@@ -159,8 +159,9 @@ console.log(birthday);
 ```
 
 ## if-else
-const id = 100;
+
 ```
+const id = 100;
 if (typeof id!= 'undefined'){
     console.log(`The ID is ${id}`);
 }else {
@@ -207,4 +208,4 @@ if (age < 16 || age>65){
 }else{
     console.log(`${name} is registered for the race`);
 }
-
+```
