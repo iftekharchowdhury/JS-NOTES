@@ -394,3 +394,136 @@ for (let x in user){
     console.log(`${x}: ${user[x]}`);
 }
 ```
+
+## Block scope with let and const :weary:
+
+```
+// Global scope
+
+var a = 1;
+let b =2;
+const c = 3;
+
+function test(){
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('Function scope: ', a,b,c);
+}
+
+test();
+
+if (true){
+    // block scope
+    var a = 4;
+    let b =5;
+    const c = 6;
+    console.log('if scope:', a,b,c)
+}
+
+for (var a=0;a<10; a++){
+    console.log(`Loop: ${a}`)
+}
+
+
+console.log('Global scope: ', a,b,c);
+
+```
+
+## Play with DOM
+
+```
+console.dir(document)
+let headerElement = document.getElementById('header');
+console.log(headerElement.textContent);
+console.log(headerElement.innerText);
+console.log(headerElement.innerHTML);
+
+
+```
+> getElementById living in Prototype chain
+
+```
+let items = document.getElementByClassName('item');
+for (let i=0; i<items.length; i++){
+    items[i].style.color = 'red';
+}
+
+```
+> Get ELEMENT BY TAGNAME
+
+```
+let items = document.getElementByTagName('h2');
+console.log(items);
+
+```
+
+// Query Selector
+
+```
+let lastItem = document.querySelectorAll('.item:nth-child(4)');
+
+lastItem.style.color = 'red'
+
+```
+
+> creating an element
+
+```
+const divElement = document.createElement('div')
+divElement.className = 'red';
+
+divElement.setAttribute('id', 'red');
+divElement.setAttribute('title', 'Red Div');
+
+const container = document.querySelector('.todo-list');
+container.appendChild (divElement, document.createElement('p'), 'hello world');
+
+```
+
+## Document object
+
+> window is a global object.
+> document is a attribute of window object.
+
+```
+let val;
+val = document;
+allVal = document.all
+accessOneVal = document.all[7]
+val = document.head;
+bodyVal = document.body;
+doctypeVal = document.doctype;
+domainVal = document.domain;
+urlVal = document.URL
+CharacterSetVal = document.characterSet;
+contentTypeVal = document.contentType;
+
+formsVal = document.forms
+formsZero=document.forms[0];
+formsId = document.forms[0].id;
+formsMethod = document.forms[0].method;
+formsAction = document.forms[0].action;
+
+documentLinks = document.links;
+documentLinks = document.links[0];
+documentLinks = document.links[0].id;
+documentLinks = document.links[0].className;
+documentLinks = document.links[0].classList[0];
+
+docImages = document.images;
+
+docScripts = document.scripts;
+
+docScripts = document.scripts[2].getAttribute('src');
+
+
+
+// console.log(val)
+
+// console.log (val);
+// console.log (allVal);
+console.log (accessOneVal);
+```
+
+
