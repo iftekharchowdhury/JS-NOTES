@@ -525,5 +525,13 @@ docScripts = document.scripts[2].getAttribute('src');
 // console.log (allVal);
 console.log (accessOneVal);
 ```
+## HTTP Requests
 
+> **GET**: Retrieve data from a specified resource
+> **POST**: Submit data to be processed to a specified resource
+> **PUT**: Update a specified resource
+> **DELETE**: Delete a specified resource
+> **HEAD**: Same as get but does not return a body
+> **OPTIONS**: Returns the supported HTTP methods
+> **PATCH**: update partial resource
 
