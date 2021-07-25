@@ -645,4 +645,29 @@ p1;
 console.log(typeof(p1));
 
 ```
+**The innerHTML Property**
+> The innerHTML property can be used to get or change any HTML element, including <html> and <body>.
 
+**The getElementById Method**
+> The most common way to access an HTML element is to use the id of the element.
+
+## Finding HTML Elements
+
+> Find an element by element id `document.getElementById(id)`
+> Find elements by tag name `document.getElementsByTagName(name)` 
+> Find elements by class name `document.getElementsByClassName(name)`
+
+## Changing HTML Elements
+
+> Change the inner HTML of an element `element.innerHTML =  new html content`
+> Change the attribute value of an HTML element `element.attribute = new value`
+> Change the style of an HTML element `element.style.property = new style`
+> Change the attribute value of an HTML element `element.setAttribute(attribute, value)`
+
+## Adding and Deleting Elements
+
+> Create an HTML element `document.createElement(element)`
+> Remove an HTML element `document.removeChild(element)`
+> `document.appendChild(element)`	Add an HTML element
+> `document.replaceChild(new, old)`	Replace an HTML element
+> `document.write(text)`	Write into the HTML output stream
