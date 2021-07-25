@@ -671,3 +671,45 @@ console.log(typeof(p1));
 > `document.appendChild(element)`	Add an HTML element
 > `document.replaceChild(new, old)`	Replace an HTML element
 > `document.write(text)`	Write into the HTML output stream
+
+### Finding HTML Element by Id
+```
+const element = document.getElementById('intro')
+
+console.log(element);
+
+```
+
+> **if id not found it will return Null**
+
+## Finding HTML Elements by Tag Name
+
+```
+var tagName = document.getElementsByTagName("p")
+console.log(tagName);
+
+```
+
+## Finding HTML Elements by Class Name
+
+```
+var className = document.getElementsByClassName('class');
+
+console.log(className);
+```
+
+## JavaScript HTML DOM - Changing HTML
+
+### Changing HTML Content
+
+> The easiest way to modify the content of an HTML element is by using the innerHTML property.
+
+```
+var p1 = document.getElementById('p1')
+p1.innerHTML = "This is from DOM JS. i changed HTML VALUE"
+
+```
+
+## Changing the Value of an Attribute
+
+
