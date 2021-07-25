@@ -535,3 +535,94 @@ console.log (accessOneVal);
 > **OPTIONS**: Returns the supported HTTP methods
 > **PATCH**: update partial resource
 
+## Callback Functions
+
+**it's just a function nothing else**
+
+<blockquote>A callback function is a function that passed in as a parameter to another function and then it's ran inside the function body.</blockquote>
+
+## this keyword
+
+To understand this we need to follow these 4 rules
+
+1. implicit binding
+2. explicit binding
+3. new binding
+4. window binding
+
+1. implicit binding = we checked in which line func is calling.
+2. function is accessed by **dot(.)** notation.
+3. syntax is like **obj.function()**
+
+```
+var shakib = {
+    name: 'sakib',
+    age: 35,
+    printPlayerName: function(){
+        console.log(this.name);
+    }
+}
+shakib.printPlayerName();
+
+```
+
+
+
+```
+var printPlayerNameFunction = function (obj){
+    obj.printPlayerName = function (){
+        console.log(this.name)
+    }
+}
+
+var play1 = {
+    name: 'player one',
+    age: 35,
+};
+
+var play2 = {
+    name: 'Player two',
+    age: 40,
+};
+
+
+console.log(printPlayerNameFunction(play1));
+
+console.log(printPlayerNameFunction(play2));
+
+console.log(play1.printPlayerName());
+console.log(play2.printPlayerName());
+
+```
+### explicit example - call(), apply(), bind()
+
+```
+v1 = 'good'
+v2 = 'coder'
+
+function player3(v1,v2, level){
+    
+    console.log(`${this.name} age is ${this.age} and he is ${v1}, ${v2} ${level}`)
+}
+
+var play3 = {
+    name: 'joy',
+    age: 20,
+    version: "v1"
+};
+
+
+
+// explicitly calling player3 function using call function
+
+// player3.call(play3, v1, v2)
+
+// if we want to pass an array, call func can't take array
+
+var level = [1,2,3]
+
+player3.apply(play3, level);
+
+```
+
+
