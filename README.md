@@ -624,5 +624,25 @@ var level = [1,2,3]
 player3.apply(play3, level);
 
 ```
+> constructor function
+>  new binding
 
+```
+function place(name, address, road){
+    this.name = name;
+    this.address = address;
+    this.road = road;
+    console.log(`${this.name} ${this.address} ${this.road}`);
+    if (this.name == 'ctg'){
+        this.name = 'Chittagong';
+    }
+    console.log(`${this.name} ${this.address} ${this.road}`);
+}
+
+var p1 = new place('ctg', 'medical', 'm ali road');
+p1;
+
+console.log(typeof(p1));
+
+```
 
