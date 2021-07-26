@@ -756,8 +756,17 @@ Examples of HTML events:
 
 
 
+# synchronous and Asynchronous
 
+## synchronous blocking behavior 
 
+<blockquote>
+Suppose, At a hotel, there is two customer table and one waiter. So, waiter first goes to 
+user 1 table and take the order, go the kitchen and until the chef finished the meal, waiter is
+waiting for food. After getting the meal for customer one, waiter served the meal customer 1
+and then waiter goes to second user/ table. <br/>
 
+**Waiter = thread , table= user. One step at a time**
+</blockquote>
 
 
