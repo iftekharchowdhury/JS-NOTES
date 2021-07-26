@@ -860,3 +860,25 @@ if we want to make HTTP request, then we need this object.
 1. load – when the request is complete (even if HTTP status is like 400 or 500), and the response is fully downloaded.
 2. error – when the request couldn’t be made, e.g. network down or invalid URL.
 3. progress – triggers periodically while the response is being downloaded, reports how much has been downloaded
+
+## Code example
+
+```
+document.getElementById('button').addEventListener('click', loadData);
+
+function loadData(){
+    // create an xhr object
+    const xhr = new XMLHttpRequest();
+    // open
+    xhr.open('GET', 'data.txt', true);
+
+    xhr.onload = function(){
+        if (this.status === 200){
+            // console.log(this.responseText);
+            // document.getElementById('output').innerHTML = `<h1>${this.responseText}</h1>`
+            document.getElementById('output').innerHTML = `<h1>${this.response}</h1>`
+        }
+    }
+    xhr.send();
+}
+```
