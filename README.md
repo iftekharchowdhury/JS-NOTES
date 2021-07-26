@@ -821,3 +821,42 @@ processOrder();
 console.log(`completed order for customer 1`);
 
 ```
+
+# What is Ajax?
+
+> Asynchronous javascript & XML
+> Set of web tech
+> Send & Recv data asynchronously
+> Does not interfere with the current page
+> No page reload
+> Fetch data
+> Make async requests in the background
+
+
+## xmlHttpRequest Object
+
+> API in the form of an object
+> Provided by the browsers JS environment
+
+if we want to make HTTP request, then we need this object.
+<br>
+
+**Right now, there’s another, more modern method fetch, that somewhat deprecates XMLHttpRequest.**
+
+> XMLHttpRequest has two modes of operation: synchronous and asynchronous.
+> Create XMLHttpRequest `let xhr = new XMLHttpRequest();` <br>
+
+`xhr.open(method, URL, [async, user, password])`  <br>
+
+> method – HTTP-method. Usually "GET" or "POST".
+> URL – the URL to request, a string, can be URL object.
+> async – if explicitly set to false, then the request is synchronous, we’ll cover that a bit later.
+> user, password – login and password for basic HTTP auth (if required).<br>
+
+> Send it out. `xhr.send([body])` -This method opens the connection and sends the request to server.<br>
+
+> These three events are the most widely used:
+
+1. load – when the request is complete (even if HTTP status is like 400 or 500), and the response is fully downloaded.
+2. error – when the request couldn’t be made, e.g. network down or invalid URL.
+3. progress – triggers periodically while the response is being downloaded, reports how much has been downloaded
