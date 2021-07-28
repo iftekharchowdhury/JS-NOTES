@@ -882,3 +882,33 @@ function loadData(){
     xhr.send();
 }
 ```
+
+## what is css selector
+
+<p>A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. The element or elements which are selected by the selector are referred to as the subject of the selector.</p><br>
+
+## Why CSS selector is used?
+<p>CSS selectors are used to "find" (or select) the HTML elements you want to style.example:h1,p..etc tag<p/><br/>
+
+# What's the difference between querySelector and getElementById?
+
+<p>
+The querySelector() method returns the first element that matches the specified css selectors. The getElementById() method returns the first element that matches the given id in the DOM.</p><br/>
+
+# Callback function
+
+A callback function is a function which is:<br>
+
+1. accessible by another function, and
+2. is invoked after the first function if that first function completes
+
+```
+function doHomework(subject, callback) {
+  alert(`Starting my ${subject} homework.`);
+  callback();
+}
+function alertFinished(){
+  alert('Finished my homework');
+}
+doHomework('math', alertFinished);
+```
