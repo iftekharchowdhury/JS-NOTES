@@ -912,3 +912,74 @@ function alertFinished(){
 }
 doHomework('math', alertFinished);
 ```
+
+# ES6 Promises
+
+> **Promises in JavaScript**
+<br>
+> There are 3 states of the Promise object:
+1. Pending: Initial State, before the Promise succeeds or fails
+2. Resolved: Completed Promise
+3. Rejected: Failed Promise
+
+<blockquote>when we request data from the server by using a Promise, it will be in pending mode until we receive our data.</blockquote>
+<br>
+If we achieve to get the information from the server, the Promise will be resolved successfully. But if we don’t get the information, then the Promise will be in the rejected state.<br>
+
+## What is the difference between Callbacks and Promises?
+
+<blockquote>The main difference between Callback Functions and Promises is that we attach a callback to a Promise rather than passing it. So we still use callback functions with Promises, but in a different way (chaining).</blockquote>
+
+## Creating and Using A Promise Step by Step
+
+> Firstly, we use a constructor to create a Promise object:
+
+`const myPromise = new Promise();`
+
+> It takes two parameters, one for success (resolve) and one for fail (reject):
+
+```
+const myPromise = new Promise((resolve, reject) => {  
+    // condition
+});
+```
+> Finally, there will be a condition. If the condition is met, the Promise will be resolved, otherwise it will be rejected:
+
+```
+
+const myPromise = new Promise((resolve, reject) => {  
+    let condition;  
+    
+    if(condition is met) {    
+        resolve('Promise is resolved successfully.');  
+    } else {    
+        reject('Promise is rejected');  
+    }
+});
+
+```
+## then( ) for resolved Promises:
+
+
+`myPromise.then();`<br>
+
+The then( ) method is called after the Promise is resolved. Then we can decide what to do with the resolved Promise.<br>
+
+```
+myPromise.then((message) => {  
+    console.log(message);
+});
+
+```
+
+## catch( ) for rejected Promises:
+
+> **then( ) method is only for resolved Promises**. What if the Promise fails? Then, we need to use the catch( ) method.
+
+```
+myPromise.then((message) => { 
+    console.log(message);
+}).catch((message) => { 
+    console.log(message);
+});
+```
