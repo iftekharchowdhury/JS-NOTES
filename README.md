@@ -983,3 +983,66 @@ myPromise.then((message) => {
     console.log(message);
 });
 ```
+
+## fetch API
+
+<blockquote>allows you to make HTTP requests to servers from web browsers. 
+
+**If you have worked with XMLHttpRequest (XHR) object, the Fetch API can perform all the tasks as the XHR object does.**.
+
+### Sending a Request
+
+<p>fetch() requires only one param. **URL** . </p><br>
+
+The fetch() method returns a Promise so you can use the then() and catch() methods to handle it:
+
+```
+fetch(url)
+    .then(response => {
+        // handle the response
+    })
+    .catch(error => {
+        // handle the error
+    });
+```
+## Reading the Response
+
+> If the contents of the response are in the raw text format, you can use the text() method.<br>
+
+```
+fetch('/readme.txt')
+    .then(response => response.text())
+    .then(data => console.log(data));
+```
+
+<blockquote>    
+
+**Third Party API** 
+<br>
+> Get from external API
+
+```
+function getExternal() {
+    fetch('https://api.github.com/users') //url 
+      .then(function(res){
+        return res.json();
+      })
+      .then(function(data) {
+        console.log(data);
+        let output = '';
+        data.forEach(function(user) {
+          output += `<li>${user.login}</li>`;
+        });
+        document.getElementById('output').innerHTML = output;
+      })
+      .catch(function(err){
+        console.log(err);
+      });
+  }
+
+
+```
+</blockquote>
+
+
+</blockquote>
