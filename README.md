@@ -1108,3 +1108,77 @@ const arr = [1,2,3];
 console.log(arr); // [1,3,2]
 ```
 
+## Parsing an array returned from a function
+
+```
+function f() {
+  return [1, 2];
+}
+
+let a, b;
+[a, b] = f();
+console.log(a); // 1
+console.log(b); // 2
+
+```
+
+## Object destructuring
+
+```
+const user = {
+    id: 42,
+    is_verified: true
+};
+
+const {id, is_verified} = user;
+
+console.log(id); // 42
+console.log(is_verified); // true
+
+```
+## Assignment without declaration
+
+```
+
+let a, b;
+
+({a, b} = {a: 1, b: 2});
+
+```
+# Default values
+> A variable can be assigned a default, in the case that the value unpacked from the object is undefined.
+
+```
+const {a = 10, b = 5} = {a: 3};
+
+console.log(a); // 3
+console.log(b); // 5
+
+```
+
+## Unpacking fields from objects passed as a function parameter
+
+```
+
+const user = {
+  id: 42,
+  displayName: 'jdoe',
+  fullName: {
+    firstName: 'John',
+    lastName: 'Doe'
+  }
+};
+
+function userId({id}) {
+  return id;
+}
+
+function whois({displayName, fullName: {firstName: name}}) {
+  return `${displayName} is ${name}`;
+}
+
+console.log(userId(user)); // 42
+console.log(whois(user));  // "jdoe is John"
+
+```
+
