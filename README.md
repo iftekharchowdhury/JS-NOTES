@@ -1068,3 +1068,17 @@ console.log(rest);
 // expected output: Array [30,40,50]
 
 ```
+
+```
+({ a, b } = { a: 10, b: 20 });
+console.log(a); // 10
+console.log(b); // 20
+
+// Stage 4(finished) proposal
+({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
+console.log(a); // 10
+console.log(b); // 20
+console.log(rest); // {c: 30, d: 40}
+
+```
+
