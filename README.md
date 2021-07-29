@@ -1081,4 +1081,17 @@ console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
 
 ```
+## Basic variable assignment
+
+```
+const foo = ['one', 'two', 'three'];
+
+const [red, yellow, green] = foo;
+console.log(red); // "one"
+console.log(yellow); // "two"
+console.log(green); // "three"
+
+```
+
+
 
