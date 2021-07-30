@@ -1246,3 +1246,65 @@ for (const {name: n, family: {father: f}} of people) {
 
 
 ```
+
+# Class
+
+The class function basically creates a template that we can use to create objects later. The constructor() method is a special method called when an instance of the User class is created. 
+
+```
+class User{
+    constructor(name, age, email){
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+}
+
+const jeff = new User("Jeff", 30, "jeff@gmail.com");
+
+const jeff = new User("sara", 30, "sara@gmail.com");
+
+const jeff = new User("dsa", 30, "saf@gmail.com");
+
+```
+
+# Methods
+
+```
+class User{
+    constructor(name, age, email){
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+    // method
+    increaseAge(){
+        this.age +=1;
+    }
+}
+
+```
+
+<blockquote>
+Classes can also contain static methods. A static method is a function that is bound to the class, not an object. A static method cannot be called from an instance of the class. Here’s an example:
+</blockquote>
+
+```
+class User{
+    constructor(name, age, email){
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+    // method
+    increaseAge(){
+        this.age +=1;
+    }
+    // static method
+    static staticMethod(){
+        console.log("I am a static method");
+    }
+}
+
+```
+
