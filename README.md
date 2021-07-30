@@ -1307,4 +1307,37 @@ class User{
 }
 
 ```
+<blockquote>
+Let’s take a quick look at getters and setters. One of the core concepts of OOP is encapsulation. An important part of encapsulation is that data (object properties) should not be directly accessed or modified from outside the object. To access or modify a property we would use a getter (access) or a setter (modify), which are specific methods we define in our class. Let’s take a look at a quick example:
+</blockquote>
 
+```
+class User{
+    constructor(name, age, email){
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+    // method
+    increaseAge(){
+        this.age +=1;
+    }
+    // static method
+    static staticMethod(){
+        console.log("I am a static method");
+    }
+    // getter and setter method
+    get name(){ return this._name}
+    set name (newName) {this._name = newName};
+}
+
+const jeff = new User("Jeff", 30, "jeff@gmail.com");
+jeff.increaseAge();
+
+jeff.name = 'joiy'
+console.log(jeff.name);
+
+```
+<blockquote>
+Inheritance: Classes can also inherit from other classes. The class being inherited from is called the parent, and the class inheriting from the parent is called the child. In our example, another class, let’s say Administrator, can inherit the properties and methods of the User class
+</blockquote>
