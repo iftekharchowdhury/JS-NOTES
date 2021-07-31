@@ -1340,4 +1340,56 @@ console.log(jeff.name);
 ```
 <blockquote>
 Inheritance: Classes can also inherit from other classes. The class being inherited from is called the parent, and the class inheriting from the parent is called the child. In our example, another class, let’s say Administrator, can inherit the properties and methods of the User class
+</blockquote> 
+
+
+# Hoisting
+
+<blockquote>
+
+When you execute a piece of JavaScript code, the JavaScript engine creates the global execution context.<br>
+
+The global execution context has two phases: **creation and execution**. <br>
+
+During the creation phase, **the JavaScript engine moves the variable and function declarations to the top of your code. This feature is known as hoisting in JavaScript**.
+
+suppose, i declare this code:
+
+```
+console.log(counter); // undefined
+var counter = 1;
+
+```
+
+But after taking variable and function, JS execute the code like this:<br/>
+
+However, the first line of code doesn’t cause an error because the JavaScript engine moves the variable declaration to the top of the script. Technically, the code looks like the following in the execution phase:<br/>
+
+```
+var counter;
+
+console.log(counter); // undefined
+counter = 1;
+
+```
+Technically speaking, during the creation phase of the global execution context, the JavaScript engine places the variable counter in the memory and initializes its value to undefined.
+
+### let keyword
+The following declares the variable counter with the let keyword:<br>
+
+```
+console.log(counter);
+let counter = 1;
+
+```
+**"ReferenceError: Cannot access 'counter' before initialization**
+
+The error message explains that the counter variable is already in the heap memory. However, it hasn’t initialized.
+
+```
+console.log(alien);
+let counter = 1;
+
+```
 </blockquote>
+
