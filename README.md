@@ -1391,5 +1391,82 @@ console.log(alien);
 let counter = 1;
 
 ```
+## Function hoisting
+Like variables, the JavaScript engine also hoists the function declarations. It moves the function declarations to the top of the script. For example:
+
+```
+let x = 20,
+    y = 10;
+
+let result = add(x,y);
+console.log(result);
+
+function add(a, b){
+return a + b;
+}
+
+```
+In this example, we called the add() function before defining it. The above code is equivalent to the following:
+
+```
+function add(a, b){
+    return a + b;
+}
+
+let x = 20,
+    y = 10;
+
+let result = add(x,y);
+console.log(result);
+
+```
+## Function expressions
+
+```
+
+let x = 20,
+    y = 10;
+
+let result = add(x,y);
+console.log(result);
+
+var add = function(x, y) {
+return x + y;
+}
+
+```
+If you execute the code, the following error will occur:<br/>
+
+**`"TypeError: add is not a function`**
+
+<p>During the creation phase of the global execution context, the JavaScript Engine creates the add variable in the memory and initializes its value to undefined. When executing the following code, the add is undefined, hence, it isn’t a function:</p>
+
+## Arrow functions
+
+```
+
+let x = 20,
+    y = 10;
+
+let result = add(x,y);
+console.log(result);
+
+var add = (x, y) => x + y;
+
+```
+<p>The code also issues the same error as the function expression example because arrow functions are syntactic sugar for defining function expressions.</p>
+
+`TypeError: add is not a function`
+
+Similar to the functions expressions, the arrow functions aren’t hoisted.
+
+
+> JavaScript hoisting occurs during the creation phase of the execution context that moves the variable and function declarations to the top of the script.
+
+> The JavaScript engine hoists the variables declared using the let keyword, but it doesn’t initialize them as the variables declared with the var keyword.
+
+> Function expressions and arrow functions aren’t hoisted.
+
+
 </blockquote>
 
