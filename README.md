@@ -1470,3 +1470,17 @@ Similar to the functions expressions, the arrow functions aren’t hoisted.
 
 </blockquote>
 
+## Array Helper Methods
+
+<blockquote>
+> forEach
+> map
+> filter
+> find
+> every
+> some
+> reduce
+
+
+
+</blockquote>
